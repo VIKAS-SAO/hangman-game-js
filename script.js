@@ -111,9 +111,10 @@ var lines=[
 
 
 
+// keyboard button event listeners
 
   var drawn=0;
-  function button_sensor(index){
+   function button_sensor(index){
     const button=document.querySelectorAll('.button') 
     button[index].setAttribute('disabled','disabled')
     var title= localStorage.getItem('title').toUpperCase() 
@@ -124,14 +125,12 @@ var lines=[
          
             if(index+65 == title.charCodeAt(i)){
                 match++;
-                work = setCharAt( work , 2*i, title.charAt(i));
+                 work = setCharAt( work , 2*i, title.charAt(i));
                  document.getElementById('work').textContent =work;
             } 
              
      }
      var lives_left = document.getElementById('lives_left') 
-    
-
     if(match==0){
         var lives_left = document.getElementById('lives_left')
         lives_left.textContent=parseInt(lives_left.textContent)-1;
@@ -139,12 +138,27 @@ var lines=[
         drawn++
     }
     if(parseInt(lives_left.textContent)==0){
-        document.getElementById('result').textContent="YOU LOST" 
+        document.getElementById('result').textContent="YOU LOST !!" 
          setTimeout( function(){
-            alert('YOU LOST')
+             var message=`
+             YOU LOST !!
+             answer is ${title} 
+             `
+            alert(message)
             location.reload()
-        }, 1000);
-        
+        }, 1000); 
+     }
+     for (var i=0;i<title.length;i++){
+
+        //console.log(title.charAt(i),document.getElementById('work').textContent.charAt(2*i))
+         if(title.charAt(i)==' '){continue;}
+        if(title.charAt(i)!= document.getElementById('work').textContent.charAt(2*i)){break;}
+       console.log(title.charAt(i) ,  document.getElementById('work').textContent.charAt(2*i))
+         if(i==title.length-1){
+            document.getElementById('result').textContent="YOU WON !!" 
+         }
+
+
      }
      
   }

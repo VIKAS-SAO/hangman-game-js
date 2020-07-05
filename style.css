@@ -7,7 +7,7 @@ body{
     background-image: radial-gradient(rgb(252, 255, 47),rgb(243, 144, 32));
     background-color: rgb(12, 166, 226);
     background-size:contain;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
  }
 #canvas{
@@ -28,12 +28,14 @@ body{
     position: absolute;
     top:35%;
     left:2%;
-    transform: translate(0,-50%);  
+    transform: translate(0,-50%); 
+    overflow-y:scroll; 
  }
  #hint #hint_button{
      height:20%;
      width:30%;
-     font-size: 150%;
+     font-size: 3vw;
+     transform: scale(1,.8);
  }
  #lives{
     height: 30%;
@@ -48,8 +50,13 @@ body{
  #lives #lives_left{
     height:50%;
     width:100%;
-    font-size:400%;
+    font-size:4vw;
      
+ }
+ #play_again{
+    height:50%;
+    width:100%;
+    font-size:1.2vw;
  }
  #result{
     height: 10%;
@@ -60,10 +67,13 @@ body{
     left:50%;
     transform: translate(-50%,-50%); 
     border-bottom:none; 
+    font-size: 5vw;
+    /* transform: scale(2,1); */
  }
+  
  #workspace{
     height: 10%;
-    width: 75%;
+    width: 100%;
     border:5px black solid;
     position: absolute;
     top:70%;
@@ -74,7 +84,7 @@ body{
  #work{
      font-size: 85%;
      font-family: 'Candal', sans-serif;
-     transform: scale(1.1, 1.4);
+     transform: scale(.7, 1.4);
      
   }
  #buttons{
@@ -90,7 +100,7 @@ body{
      position: relative;
     height: 50%;
     width: 7%;
-    font-size: 260%; 
+    font-size: 5vw; 
  }
  #play_again{
     position:relative;
@@ -101,3 +111,4 @@ body{
     height: 20%;
     bottom:10%;
  }
+  
