@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel = "icon" href =  "hangman.png"   type = "image/x-icon"> 
+ </head>
+<body>
+    <h1>Hangman Game</h1>
+ 
+    <canvas id="canvas"></canvas>
+    <div id="hint">
+       
+       <button id ="hint_button">HINT</button>
+       <p id="hint_text"> </p>
+    </div>
+    <div id="lives">
+       <h1>LIVES</h1>
+       <h2 id="lives_left">10 </h2>
+       <button id="play_again"> <a href="index.html"> PLAY AGAIN</a>   </button>
+    </div>
+    <div id="result"> </div>
+    <div id="workspace">
+       <p id="work"> </p>
+    </div>
+    <div id="buttons">
+        <button id="A" class="button" onclick="button_sensor(0)">A</button>
+        <button id="B" class="button" onclick="button_sensor(1)">B</button>
+        <button id="C" class="button" onclick="button_sensor(2)">C</button>
+        <button id="D" class="button" onclick="button_sensor(3)">D</button>
+        <button id="E" class="button" onclick="button_sensor(4)">E</button>
+        <button id="F" class="button" onclick="button_sensor(5)">F</button>
+        <button id="G" class="button" onclick="button_sensor(6)">G</button>
+        <button id="H" class="button" onclick="button_sensor(7)">H</button>
+        <button id="I" class="button" onclick="button_sensor(8)">I</button>
+        <button id="J" class="button" onclick="button_sensor(9)">J</button>
+        <button id="K" class="button" onclick="button_sensor(10)">K</button>
+        <button id="L" class="button" onclick="button_sensor(11)">L</button>
+        <button id="M" class="button" onclick="button_sensor(12)">M</button>
+        <button id="N" class="button" onclick="button_sensor(13)">N</button>
+        <button id="O" class="button" onclick="button_sensor(14)">O</button>
+        <button id="P" class="button" onclick="button_sensor(15)">P</button>
+        <button id="Q" class="button" onclick="button_sensor(16)">Q</button>
+        <button id="R" class="button" onclick="button_sensor(17)">R</button>
+        <button id="S" class="button" onclick="button_sensor(18)">S</button>
+        <button id="T" class="button" onclick="button_sensor(19)">T</button>
+        <button id="U" class="button" onclick="button_sensor(20)">U</button>
+        <button id="V" class="button" onclick="button_sensor(21)">V</button>
+        <button id="W" class="button" onclick="button_sensor(22)">W</button>
+        <button id="X" class="button" onclick="button_sensor(23)">X</button>
+        <button id="Y" class="button" onclick="button_sensor(24)">Y</button>
+        <button id="Z" class="button" onclick="button_sensor(25)">Z</button> 
+
+    </div>
+    
+</body>
+<script src="script.js"></script>
+ <link rel="stylesheet" href="style.css">
+ <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+ </html>
