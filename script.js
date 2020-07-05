@@ -117,6 +117,8 @@ var lines=[
    function button_sensor(index){
     const button=document.querySelectorAll('.button') 
     button[index].setAttribute('disabled','disabled')
+    button[index].setAttribute('style','background-color:grey;')
+    
     var title= localStorage.getItem('title').toUpperCase() 
     var work=  document.getElementById('work').textContent ;
    
